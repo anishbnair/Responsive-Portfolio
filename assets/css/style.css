@@ -225,49 +225,106 @@ input[type=submit] {
   border: 0 none;
 }
 
+
 /* Media Queries */
 
-/* This rule becomes active when the browser width is 769px or above*/
+/* 
+  These rules take effect when the browser's width
+  is 769px or more.
+*/
 @media screen and (max-width: 980px) {
   
+    /*
+      No specific rules for large screens at this time.
+    */
+  }
     
-  }
-
-/* This rule becomes active when the browser width is 641px or above*/
-@media screen and (max-width: 768px) {
- 
-  .sidebar {
-    width: 100%;
-    float: none;
-  }
-  .sectionmain {
-    width: 100%;
-  }
-    #headmain {
-   width: 100%;
-  }
-   #profilename {
-  width: 100%;
-}
-    
-
-  /* This rule becomes active when the browser width is 640px or less*/
-@media screen and (max-width: 640px) {
-  .nav {
-    float: left;
-    text-align: center;
+  
+  /* 
+    These rules take effect when the browser's width
+    is 641px or more.
+  */
+  @media screen and (max-width: 768px) {
+  
+    /* Sidebar icons drop below main content. */
+    .sidebar {
+      clear: both;
+      float: left;
+      overflow: auto 0;
+      width: 96%;
+      margin: 2%;
+      margin-right: 2%
     }
-  .sidebar {
-    width: 70%;
-    float: none;
+  
+    /* Main content takes up full width. */
+    .sectionmain  {
+      clear: both;
+      float: left;
+      overflow: auto 0;
+      width: 96%;
+      margin: 2%;
+    }
+  
   }
-  .sectionmain {
-    width: 100%;
-  }
-    #headmain {
-    width: 100%;
-  }
+  
+  /* 
+    These rules take effect when the browser's width
+    is 640px or less.
+  */
+  @media screen and (max-width: 640px) {
+  
+    /* Ful width name header. */
     #profilename {
-    width: 100%;  
+      float: left;
+      background-color: #4aaaa5;
+      border-bottom: none;
+      color: #ffffff;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 0;
+      font-family: 'Georgia', Times, Times New Roman, serif;
+      text-align: center;
+      font-weight: bold;
+      vertical-align: middle;
+      padding-top: 3%;
+      margin-left: 0%;
+    }
+  
+    /* Nav drops below header. */
+    nav	{
+      clear: both;
+      width: 100%;
+      text-align: center;
+      float: left;
+      border-bottom: 2px solid #cccccc;
+    }
+  
+    p {
+      margin-top: 15px;
+    }
+  
+    .sidebar {
+      clear: both;
+      float: left;
+      overflow: auto 0;
+      width: 96%;
+      margin: 2%;
+      margin-right: 2%
+    }
+  
+    .sectionmain  {
+      clear: both;
+      float: left;
+      overflow: auto 0;
+      width: initial;
+      margin: 2%;
+    }
+  
+    /* Image full width with space before paragraph. */
+    img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 15px;
+    }
+    
   }
-}
